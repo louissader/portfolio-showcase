@@ -38,15 +38,9 @@ export default function Home() {
       <section className="relative min-h-screen flex flex-col pt-16 overflow-x-hidden">
         {/* Top: centered hero content */}
         <div className="relative max-w-7xl mx-auto px-6 pt-4 md:pt-6 pb-2 md:pb-3 flex-shrink-0 text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight">
-            <TextReveal as="span" className="inline">
-              We Make Portfolio & Business
-            </TextReveal>{' '}
-            <span
-              className="inline text-accent"
-            >
-              Websites
-            </span>
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+            We Make Portfolio & Business{' '}
+            <span className="text-accent">Websites</span>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
