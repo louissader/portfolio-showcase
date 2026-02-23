@@ -77,7 +77,7 @@ export const projects = [
       "Clean design with strong typography creates the strongest first impression",
       "Fast-loading sites keep visitors engaged longer"
     ],
-    liveLink: "https://louissader.dev",
+    liveLink: "https://louissader.vercel.app",
     githubLink: "https://github.com/louissader/louissader.dev",
     launchDate: "October 2025",
     buildTime: "2 weeks",
