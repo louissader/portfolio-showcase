@@ -37,16 +37,16 @@ export default function Home() {
       {/* Hero + Featured Projects — all in one viewport */}
       <section className="relative min-h-screen flex flex-col pt-16 overflow-x-hidden">
         {/* Top: centered hero content */}
-        <div className="relative max-w-7xl mx-auto px-6 pt-4 md:pt-6 pb-2 md:pb-3 flex-shrink-0 text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+        <div className="relative max-w-7xl mx-auto px-6 pt-6 pb-3 flex-shrink-0 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
             We Make Portfolio & Business{' '}
-            <span className="text-accent">Websites</span>
+            <span style={{ background: 'linear-gradient(to right, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Websites</span>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="mt-2 md:mt-3 text-xs md:text-sm text-text-muted leading-relaxed max-w-lg mx-auto"
+            className="mt-3 text-sm text-text-muted leading-relaxed max-w-lg mx-auto"
           >
             Professional websites that look great, load fast, and help you stand out from other job applicants and get more customers.
             Built by a two-person team that actually cares about your career trajectory.
@@ -55,7 +55,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="mt-2 md:mt-5 flex flex-wrap justify-center gap-2 md:gap-3"
+            className="mt-5 flex flex-wrap justify-center gap-3"
           >
             <Link
               to="/projects"
@@ -78,30 +78,30 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="mt-3 md:mt-6 grid grid-cols-4 max-w-2xl mx-auto"
+            className="mt-6 grid grid-cols-4 max-w-2xl mx-auto"
           >
             {stats.map((s, i) => (
-              <div key={i} className={`flex flex-col items-center gap-0.5 md:gap-1 py-2 md:py-3 ${i > 0 ? 'border-l border-dark-border' : ''}`}>
-                <s.icon size={14} className="text-accent md:w-4 md:h-4" />
-                <p className="text-xs md:text-sm font-bold text-text">{s.value}</p>
-                <p className="text-[9px] md:text-[11px] text-text-dim">{s.label}</p>
+              <div key={i} className={`flex flex-col items-center gap-1 py-3 ${i > 0 ? 'border-l border-dark-border' : ''}`}>
+                <s.icon size={16} className="text-accent" />
+                <p className="text-sm font-bold text-text">{s.value}</p>
+                <p className="text-[11px] text-text-dim">{s.label}</p>
               </div>
             ))}
           </motion.div>
         </div>
 
         {/* Bottom: Featured projects carousel */}
-        <div className="relative flex-1 min-h-0 mt-2 md:mt-3">
+        <div className="relative flex-1 min-h-0 mt-3">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
             className="h-full flex flex-col"
           >
-            <div className="max-w-7xl mx-auto px-6 w-full flex items-end justify-between mb-3 md:mb-5">
+            <div className="max-w-7xl mx-auto px-6 w-full flex items-end justify-between mb-5">
               <div>
-                <h2 className="text-lg md:text-xl font-bold text-text">Our Recent Work</h2>
-                <p className="text-xs md:text-sm text-text-muted mt-0.5 md:mt-1">Real websites we've built for real clients</p>
+                <h2 className="text-xl font-bold text-text">Our Recent Work</h2>
+                <p className="text-sm text-text-muted mt-1">Real websites we've built for real clients</p>
               </div>
               <Link to="/projects" data-cursor="pointer" className="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover transition-colors">
                 View All <ArrowRight size={16} />
