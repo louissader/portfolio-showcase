@@ -48,10 +48,10 @@ export default function About() {
 
       {/* Team */}
       <section className="max-w-7xl mx-auto px-6 mb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-4 md:gap-8">
           {team.map((member, i) => (
             <SectionReveal key={i} delay={i * 0.1}>
-              <TeamCard {...member} />
+              <TeamCard {...member} compact />
             </SectionReveal>
           ))}
         </div>
