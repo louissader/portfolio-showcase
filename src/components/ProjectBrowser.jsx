@@ -8,8 +8,9 @@ export default function ProjectBrowser({ projects }) {
   const [posIndex, setPosIndex] = useState(projects.length) // start in middle copy
   const [paused, setPaused] = useState(false)
   const [animate, setAnimate] = useState(true)
-  const cardWidth = 323
-  const gap = 22
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const cardWidth = isMobile ? 260 : 323
+  const gap = isMobile ? 16 : 22
   const stride = cardWidth + gap
 
   // Triple the array: [copy1][original][copy2]
@@ -95,12 +96,12 @@ export default function ProjectBrowser({ projects }) {
               }}
               onClick={() => navigate(`/projects/${project.slug}`)}
             >
-              <div className="h-44 overflow-hidden">
+              <div className="h-32 md:h-44 overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" />
               </div>
-              <div className="p-4">
-                <h3 className="font-bold text-text mb-1">{project.title}</h3>
-                <p className="text-sm text-text-muted">{project.tagline}</p>
+              <div className="p-3 md:p-4">
+                <h3 className="text-sm md:text-base font-bold text-text mb-0.5 md:mb-1">{project.title}</h3>
+                <p className="text-xs md:text-sm text-text-muted">{project.tagline}</p>
               </div>
             </div>
           )
@@ -108,7 +109,7 @@ export default function ProjectBrowser({ projects }) {
       </div>
 
       {/* Dots indicator */}
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-2 mt-2 md:mt-4">
         {projects.map((_, i) => (
           <button
             key={i}

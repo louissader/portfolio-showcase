@@ -38,13 +38,18 @@ export default function Home() {
       <section className="relative h-screen flex flex-col pt-16 overflow-hidden">
         {/* Top: centered hero content */}
         <div className="relative max-w-7xl mx-auto px-6 pt-4 md:pt-6 pb-2 md:pb-3 flex-shrink-0 text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1] tracking-tight">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight">
             <TextReveal as="span" className="inline">
               We Make Portfolio & Business
             </TextReveal>{' '}
-            <TextReveal as="span" className="inline bg-gradient-to-r from-accent to-violet bg-clip-text text-transparent" delay={0.4}>
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="inline bg-gradient-to-r from-accent to-violet bg-clip-text text-transparent"
+            >
               Websites
-            </TextReveal>
+            </motion.span>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +64,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="mt-3 md:mt-5 flex flex-wrap justify-center gap-2 md:gap-3"
+            className="mt-2 md:mt-5 flex flex-wrap justify-center gap-2 md:gap-3"
           >
             <Link
               to="/projects"
@@ -82,7 +87,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="mt-4 md:mt-6 grid grid-cols-4 max-w-2xl mx-auto"
+            className="mt-3 md:mt-6 grid grid-cols-4 max-w-2xl mx-auto"
           >
             {stats.map((s, i) => (
               <div key={i} className={`flex flex-col items-center gap-0.5 md:gap-1 py-2 md:py-3 ${i > 0 ? 'border-l border-dark-border' : ''}`}>
