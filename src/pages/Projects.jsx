@@ -77,7 +77,7 @@ export default function Projects() {
                     <h3 className="text-base font-bold text-text mb-1">{project.title}</h3>
                     <p className="text-xs text-text-muted mb-3 line-clamp-2">{project.tagline}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold text-accent">{project.metrics[0].value} {project.metrics[0].label}</span>
+                      <span className="text-xs font-bold text-accent">{project.metrics[0].value} {project.metrics[0].description}</span>
                       <span className="text-xs text-text-muted">View Details &rarr;</span>
                     </div>
                   </div>
