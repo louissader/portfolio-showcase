@@ -47,8 +47,8 @@ jobs:
 
             for (const site of sites) {
               try {
-                await page.goto(site.url, { waitUntil: 'networkidle', timeout: 30000 });
-                await page.waitForTimeout(2000);
+                await page.goto(site.url, { waitUntil: 'networkidle', timeout: 45000 });
+                await page.waitForTimeout(4000);
                 const outPath = path.join('public/images/projects', site.slug + '.jpg');
                 await page.screenshot({ path: outPath, type: 'jpeg', quality: 85 });
                 console.log('✅ ' + site.slug);
