@@ -1,8 +1,7 @@
 import { useRef, useState, useEffect, useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { ExternalLink } from 'lucide-react'
 
 export default function ProjectBrowser({ projects }) {
-  const navigate = useNavigate()
   const containerRef = useRef(null)
   const [posIndex, setPosIndex] = useState(projects.length) // start in middle copy
   const [paused, setPaused] = useState(false)
@@ -109,18 +108,24 @@ export default function ProjectBrowser({ projects }) {
           return (
             <div
               key={`${project.id}-${i}`}
-              data-cursor="view"
-              className="shrink-0 rounded-2xl overflow-hidden border border-dark-border bg-dark-light cursor-pointer"
+              data-cursor="pointer"
+              className="group shrink-0 rounded-2xl overflow-hidden border border-dark-border bg-dark-light cursor-pointer"
               style={{
                 width: cardWidth,
                 transform: `scale(${isActive ? 1.05 : 0.95})`,
                 opacity: isActive ? 1 : 0.6,
                 transition: 'transform 0.3s, opacity 0.3s',
               }}
-              onClick={() => navigate(`/projects/${project.slug}`)}
+              onClick={() => window.open(project.liveLink, '_blank')}
             >
-              <div className="h-32 md:h-44 overflow-hidden">
+              <div className="h-32 md:h-44 overflow-hidden relative">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                  <div className="flex items-center gap-1.5 text-white text-sm font-semibold">
+                    <ExternalLink size={15} />
+                    Visit Site
+                  </div>
+                </div>
               </div>
               <div className="p-3 md:p-4">
                 <h3 className="text-sm md:text-base font-bold text-text mb-0.5 md:mb-1">{project.title}</h3>

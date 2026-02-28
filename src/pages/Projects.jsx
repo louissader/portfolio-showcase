@@ -50,7 +50,7 @@ export default function Projects() {
         </SectionReveal>
 
         {/* Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <AnimatePresence mode="popLayout">
             {filtered.map((project) => (
               <motion.div
@@ -68,17 +68,17 @@ export default function Projects() {
                   <div className="aspect-video overflow-hidden">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
+                  <div className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs px-2.5 py-0.5 rounded-full bg-accent/10 text-accent font-medium">
                         {project.category}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-text mb-2">{project.title}</h3>
-                    <p className="text-sm text-text-muted mb-4 line-clamp-2">{project.tagline}</p>
+                    <h3 className="text-base font-bold text-text mb-1">{project.title}</h3>
+                    <p className="text-xs text-text-muted mb-3 line-clamp-2">{project.tagline}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-bold text-accent">{project.metrics[0].value} {project.metrics[0].label}</span>
-                      <span className="text-sm text-text-muted">View Details &rarr;</span>
+                      <span className="text-xs font-bold text-accent">{project.metrics[0].value} {project.metrics[0].label}</span>
+                      <span className="text-xs text-text-muted">View Details &rarr;</span>
                     </div>
                   </div>
                 </TiltCard>
