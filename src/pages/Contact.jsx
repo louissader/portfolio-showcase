@@ -107,7 +107,7 @@ export default function Contact() {
                 <div className="p-5 rounded-xl bg-dark-lighter border border-dark-border">
                   <h4 className="text-sm font-semibold text-text mb-2">Best for</h4>
                   <p className="text-sm text-text-muted leading-relaxed">
-                    Quick questions, project inquiries, partnership opportunities, and SaaS template licensing.
+                    Quick questions, project inquiries, and partnership opportunities.
                   </p>
                 </div>
               </div>

@@ -12,6 +12,7 @@ const navLinks = [
 const projectLinks = [
   { to: '/projects/car-detailing', label: 'Elite Car Detailing' },
   { to: '/projects/louissader-dev', label: 'Louis Sader Portfolio' },
+  { to: '/projects/trey-gonzalez', label: 'Trey Gonzalez Portfolio' },
   { to: '/projects/logan-carter', label: 'Logan Carter Portfolio' },
   { to: '/projects/aidan-carter', label: 'Aidan Carter Portfolio' },
 ]
@@ -69,19 +70,29 @@ export default function Footer() {
               <a href="tel:+16032757513" className="flex items-center gap-2 text-sm text-text-muted hover:text-text transition-colors" data-cursor="pointer">
                 <Phone size={16} /> (603) 275-7513
               </a>
-              <div className="flex gap-3 pt-2">
-                <a href="https://www.linkedin.com/in/louis-sader-a6a391287/" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent transition-colors" data-cursor="pointer">
-                  <Linkedin size={20} />
-                </a>
-                <a href="https://github.com/louissader" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent transition-colors" data-cursor="pointer">
-                  <Github size={20} />
-                </a>
-                <a href="https://www.linkedin.com/in/logan-carter-35h/" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent transition-colors" data-cursor="pointer">
-                  <Linkedin size={20} />
-                </a>
-                <a href="https://github.com/Logan566C" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent transition-colors" data-cursor="pointer">
-                  <Github size={20} />
-                </a>
+              <div className="space-y-3 pt-2">
+                <div>
+                  <p className="text-xs text-text-dim mb-1.5">Louis Sader</p>
+                  <div className="flex gap-3">
+                    <a href="https://www.linkedin.com/in/louis-sader-a6a391287/" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent transition-colors" data-cursor="pointer">
+                      <Linkedin size={20} />
+                    </a>
+                    <a href="https://github.com/louissader" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent transition-colors" data-cursor="pointer">
+                      <Github size={20} />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs text-text-dim mb-1.5">Logan Carter</p>
+                  <div className="flex gap-3">
+                    <a href="https://www.linkedin.com/in/logan-carter-35h/" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent transition-colors" data-cursor="pointer">
+                      <Linkedin size={20} />
+                    </a>
+                    <a href="https://github.com/Logan566C" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent transition-colors" data-cursor="pointer">
+                      <Github size={20} />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

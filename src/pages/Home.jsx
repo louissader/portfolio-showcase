@@ -49,7 +49,7 @@ export default function Home() {
             className="mt-3 text-sm text-text-muted leading-relaxed max-w-lg mx-auto"
           >
             Professional websites that look great, load fast, and help you stand out from other job applicants and get more customers.
-            Built by a two-person team that actually cares about your career trajectory.
+            Built by a two-person team that actually cares about your results.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

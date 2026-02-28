@@ -4,7 +4,7 @@ import TextReveal from '../components/TextReveal'
 import SectionReveal from '../components/SectionReveal'
 
 const guarantees = [
-  { icon: DollarSign, title: 'Lowest Price Guarantee', desc: 'We guarantee you\'ll pay less than what you\'re currently paying — or less than any competing quote. No inflated agency pricing.' },
+  { icon: DollarSign, title: 'Honest, Transparent Pricing', desc: 'No inflated agency markup. You get a fair, upfront quote — and we\'ll always beat any competing offer for the same scope of work.' },
   { icon: Clock, title: 'Lightning Fast Delivery', desc: 'Most websites go live in 3 days. We don\'t drag things out. You get a professional site, fast.' },
   { icon: Shield, title: '1 Year Free Support', desc: 'Every project includes a full year of free support and updates. We\'re with you long after launch.' },
 ]
@@ -30,7 +30,7 @@ export default function Services() {
             Simple Pricing, No Surprises
           </TextReveal>
           <p className="text-xl text-text-muted max-w-2xl mx-auto mb-8">
-            Tell us what you need and we'll give you an honest quote. We guarantee you'll pay less than what you're currently paying — or less than any other quote you've received.
+            Tell us what you need and we'll give you an honest quote — no agency markup, no hidden fees. Just fair pricing for professional work.
           </p>
           <Link
             to="/contact"
